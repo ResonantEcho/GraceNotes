@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grace Notes with Andy Burdge</title>
+  <title>Grace Notes with Andy</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -63,9 +63,9 @@
     }
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-size: clamp(3rem, 7.5vw, 5.2rem);
       font-weight: 300;
-      line-height: 1.1;
+      line-height: 1.05;
       color: var(--white);
       letter-spacing: 0.02em;
       opacity: 0;
@@ -74,6 +74,16 @@
     h1 em {
       font-style: italic;
       color: var(--gold);
+    }
+    h1 .with-andy {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      font-weight: 300;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--silver);
+      display: block;
+      margin-top: 10px;
     }
     .header-rule {
       display: flex;
@@ -448,7 +458,7 @@
 
   <header>
     <p class="eyebrow">Music &nbsp;·&nbsp; Faith &nbsp;·&nbsp; Reflection</p>
-    <h1><em>Grace Notes</em><br>with Andy Burdge</h1>
+    <h1><em>Grace Notes</em><br><span class="with-andy">with Andy</span></h1>
     <div class="header-rule">
       <span></span>
       <i>✦ ✦ ✦</i>
@@ -532,7 +542,7 @@
   </main>
 
   <footer>
-    <em>Grace Notes</em> &nbsp;·&nbsp; Andy Burdge &nbsp;·&nbsp; Made with music &amp; faith
+    <em>Grace Notes</em> &nbsp;·&nbsp; with Andy &nbsp;·&nbsp; Made with music &amp; faith
   </footer>
 
   <script>
