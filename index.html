@@ -442,6 +442,109 @@
     }
     footer em { color: var(--gold-dim); font-style: normal; }
 
+    /* ── CREDO ── */
+    .credo-section {
+      margin-bottom: 64px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.85s;
+    }
+    .credo-intro {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .credo-intro h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .credo-intro p {
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: var(--silver);
+      max-width: 620px;
+      margin: 0 auto;
+      letter-spacing: 0.03em;
+    }
+    .credo-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    @media (max-width: 600px) {
+      .credo-grid { grid-template-columns: 1fr; }
+    }
+    .credo-grid details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: border-color 0.25s ease;
+      height: fit-content;
+    }
+    .credo-grid details:hover {
+      border-color: var(--gold-dim);
+    }
+    .credo-grid details[open] {
+      border-color: var(--gold-dim);
+      background: var(--surface2);
+    }
+    .credo-grid summary {
+      padding: 16px 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--off-white);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+      user-select: none;
+    }
+    .credo-grid summary::-webkit-details-marker { display: none; }
+    .credo-grid summary::after {
+      content: "+";
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--gold-dim);
+      transition: transform 0.3s ease, color 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .credo-grid details[open] summary::after {
+      content: "−";
+      color: var(--gold);
+      transform: none;
+    }
+    .credo-grid details[open] summary {
+      color: var(--white);
+    }
+    .credo-item-body {
+      padding: 0 20px 20px 20px;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--silver);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+    .credo-item-body blockquote {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-left: 2px solid var(--gold-dim);
+      background: rgba(201,168,76,0.05);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--off-white);
+      line-height: 1.7;
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeDown {
       from { opacity: 0; transform: translateY(-12px); }
@@ -496,7 +599,108 @@
     <!-- DIVIDER -->
     <div class="section-divider"><span>✦</span></div>
 
-    <!-- LINKS -->
+    <!-- CREDO -->
+    <section class="credo-section">
+      <div class="credo-intro">
+        <p class="section-label">A Statement of Faith</p>
+        <h3>Gratia et Cantus Firmus</h3>
+        <p>My faith is not a list of rigid rules, but a living melody built upon the unwavering anchor of God's grace in Jesus Christ.</p>
+      </div>
+      <div class="credo-grid">
+
+        <details>
+          <summary>I. God: The Architect</summary>
+          <div class="credo-item-body">
+            I believe in a God of radical, boundless grace. As the "Repairer of Broken Walls," God works constantly to restore humanity through unconditional, inclusive love.
+            <blockquote>"The Lord is merciful and gracious, slow to anger and abounding in steadfast love." — Psalm 103:8</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>II. Jesus: The Christ</summary>
+          <div class="credo-item-body">
+            Jesus is the visible image of the invisible God. He dismantled barriers of exclusion and defeated the powers of sin to offer salvation and a life of humble service.
+            <blockquote>"He is the image of the invisible God, the firstborn of all creation." — Colossians 1:15</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>III. The Holy Spirit: The Animating Breath</summary>
+          <div class="credo-item-body">
+            The Spirit is the Parakletos — the Divine Advocate who empowers us and intercedes for us. The greatest sign of the Spirit's presence is Love.
+            <blockquote>"The Spirit helps us in our weakness... intercedes with sighs too deep for words." — Romans 8:26</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>IV. Humanity: Saints and Sinners</summary>
+          <div class="credo-item-body">
+            Created in the Image of God yet profoundly broken, we are simultaneously saints and sinners. We are entirely dependent on divine grace for restoration.
+            <blockquote>"For by grace you have been saved through faith... it is the gift of God." — Ephesians 2:8–9</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>V. Prayer: The Essential Dialogue</summary>
+          <div class="credo-item-body">
+            Prayer is the essential breath of the Christian life. It is a posture of listening and communion that aligns our hearts with God's heart.
+            <blockquote>"Rejoice always, pray without ceasing, give thanks in all circumstances." — 1 Thess 5:16–18</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>VI. Scripture: The Score</summary>
+          <div class="credo-item-body">
+            The Bible is the inspired witness to the Word of God. Through a Christocentric lens, we find it a living guide for a relevant word in today's world.
+            <blockquote>"Your word is a lamp to my feet and a light to my path." — Psalm 119:105</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>VII. Worship: Orienting Life</summary>
+          <div class="credo-item-body">
+            Worship is the act of orienting our lives toward God, synchronizing our personal rhythms back to the cantus firmus of grace.
+            <blockquote>"True worshipers will worship the Father in Spirit and truth." — John 4:23</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>VIII. Baptism: Rebirth</summary>
+          <div class="credo-item-body">
+            An outward symbol of dying and rising with Christ. It marks our adoption into God's family, empowered for witness and service.
+            <blockquote>"We were buried with him by baptism... so we too might walk in newness of life." — Romans 6:4</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>IX. Communion: The Lord's Table</summary>
+          <div class="credo-item-body">
+            Through anamnesis, we enter the saving mystery of Christ here and now. This table is a place of radical hospitality where the broken are made whole.
+            <blockquote>"Do this in remembrance of me." — Luke 22:19</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>X. Leadership: Three Strands</summary>
+          <div class="credo-item-body">
+            A cord of three strands: Proclamation, Service, and Oversight. Leadership is about modeling the radical humility and service of Christ.
+            <blockquote>"The Son of Man came not to be served but to serve." — Mark 10:45</blockquote>
+          </div>
+        </details>
+
+        <details>
+          <summary>XI. The Church: Unity in Diversity</summary>
+          <div class="credo-item-body">
+            The Church is the living Body of Christ. Unity is not uniformity, but the harmony of different voices singing the same song of Love.
+            <blockquote>"Making every effort to maintain the unity of the Spirit in the bond of peace." — Ephesians 4:3</blockquote>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"><span>✦</span></div>
     <section class="links-section">
       <p class="section-label">Find me here</p>
       <div class="links-grid">
